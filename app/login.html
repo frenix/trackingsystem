@@ -39,15 +39,15 @@
             </div>
             <!-- Username -->
             <div>
-                <input class="text" type="text"  name="userName" placeholder="Enter your Username.." required autofocus>   
+                <input class="text" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
             </div>
             <!-- Password -->
             <div>
-                <input class="text" type="password"  name="passPhrase" placeholder="Enter your Password.." required autofocus>   
+                <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required autofocus>   
             </div>
             <div id="lower">
               <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-              <input type="submit" value="Login">
+              <input type="submit" value="Login" onclick="checkCookie()">
             </div><!--/ lower-->
         </form>
     </div> <!-- end of header-->
@@ -57,6 +57,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- script src="js/bootstrap.min.js"></script-->
+    <script src="js/login.js"></script>
   </body>
 </html>
