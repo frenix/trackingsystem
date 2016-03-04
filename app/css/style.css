@@ -1,0 +1,449 @@
+/* General */
+
+.container {
+  /*width: 960px;*/
+  width: : 500px;         
+  position: fixed;
+  left: 30px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+
+}
+
+#user-container {
+  width: 960px;    
+  position: fixed;
+  left: 30px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+
+}
+
+/* Header */
+
+.header {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  
+  font-size: 17px;
+  padding: 15px;
+}
+
+
+/* Menu */ 
+
+.header .menu {
+  float: right;
+  font-family: 'Oswald', sans-serif;
+  list-style: none;
+  margin-top: 5px;
+}
+
+.menu > li {
+  display: inline;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menu a {
+  color: #898989;
+}
+
+/* Dropdown */
+
+.dropdown-menu {
+  font-size: 16px;
+  margin-top: 5px;
+  min-width: 105px;
+}
+
+.dropdown-menu li a {
+  color: #898989;
+  padding: 6px 20px;
+  font-weight: 300;
+}
+
+
+/* Carousel */
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 470px;
+  border-bottom: 1px solid #ddd;
+}
+
+.slide {
+  background: transparent url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/feature-gradient-transparent.png') center center no-repeat;
+  background-size: cover;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.active-slide {
+    display: block;
+}
+
+.slide-copy h1 {
+  color: #363636;  
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 40px;
+  margin-top: 105px;
+  margin-bottom: 0px;
+}
+
+.slide-copy h2 {
+  color: #b7b7b7;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 40px;
+  margin: 5px;
+}
+
+.slide-copy p {
+  color: #959595;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15em;
+  line-height: 1.75em;
+  margin-bottom: 15px;
+  margin-top: 16px;
+}
+
+.slide-img {
+  text-align: right;
+}
+
+/* Slide feature */
+
+.slide-feature {
+  text-align: center;
+  background-image: url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/ac.png');
+  height: 470px;
+}
+
+.slide-feature img {
+  margin-top: 112px;
+  margin-bottom: 28px;
+}
+
+.slide-feature a {
+  display: block;
+  color: #6fc5e0;
+  
+  font-family: "HelveticaNeueMdCn", Helvetica, sans-serif;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  
+  font-size: 20px;
+}
+
+.slider-nav {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.arrow-prev {
+  margin-right: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.arrow-next {
+  margin-left: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 9px;
+}
+
+.slider-dots {
+  list-style: none;
+  display: inline-block;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.slider-dots li {
+  color: #bbbcbc;
+  display: inline;
+  font-size: 30px;
+  margin-right: 5px;
+}
+
+.slider-dots li.active-dot {
+  color: #363636;
+}
+
+/* App links */
+
+.get-app {
+  list-style: none;
+  padding-bottom: 9px;
+  padding-left: 0px;
+  padding-top: 9px;
+}
+
+.get-app li {
+  float: left;
+  margin-bottom: 5px;
+  margin-right: 5px;
+}
+
+.get-app img {
+  height: 40px;
+}
+
+/* new */
+/* Basics */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background: #f0f0f0;
+}
+
+/* Label */
+.label {
+  color: black;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  padding-left: 10px;
+  margin: 5px;
+}
+
+/* Label */
+.label-small {
+  color: black;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  padding-left: 10px;
+  margin: 5px;
+}
+
+/* Title */
+.caption {
+  color: #777;
+  display: inline-block;
+  margin-left: 10px;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Text */
+.text {
+  color: black;
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  margin: 10px;
+  border: 1px solid #a8c9e4;
+  box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 3px #e6f2f9;
+}
+
+/* p */
+.text-danger {
+  color: blue;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
+  margin: 0px;
+}
+
+/* Button */
+.button {
+  color: black;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 10px;
+}
+
+/* Select */
+.select option{
+  color: black;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+
+  margin: 20px;
+}
+
+/* Select */
+.select {
+  color: black;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 20px;
+}
+
+/* Table */
+table, th, td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+}
+th, td {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 15px;
+}
+tr:hover {background-color: #f5f5f5};
+/*tr:nth-child(even){background-color: #f2f2f2}*/
+
+/* Form */
+.form-control {
+  color: #555;
+  background-color: #ffffff;
+  position: fixed;
+  width: 548px;
+  height: 250px;
+  top: 300px;
+  left: 200px;
+  margin-top: -140px;
+  margin-left: -170px;
+
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+/* Form small */
+.form-small {
+  color: #555;
+  background-color: #ffffff;
+  position: fixed;
+  width: 548px;
+  height: 250px;
+  top: 300px;
+  left: 200px;
+  margin-top: -140px;
+  margin-left: -170px;
+
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+/* id=user-form */
+#user-form {
+  color: #555;
+  background-color: #ffffff;
+  position: fixed;
+  width: 960px; 
+  height: 543px;
+  top: 300px;
+  left: 200px;
+  margin-top: -140px;
+  margin-left: -170px;
+
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}
+/* id = lower */
+#lower {
+  background: #ecf2f5;
+  width: 100%;
+  height: 95px;
+  margin-top: 20px;
+  box-shadow: inset 0 1px 1px #fff;
+  border-top: 1px solid #ccc;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+input[type=checkbox] {
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.check {
+    margin-left: 3px;
+    font-size: 11px;
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}
+
+input[type=submit] {
+    left: 200px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #acd6ef; /*IE fallback*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#acd6ef), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #acd6ef 0%, #6ec2e8 100%);
+    border-radius: 30px;
+    border: 1px solid #66add6;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+    background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+    background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+input[type=submit]:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6ec2e8), to(#b6e2ff));
+    background-image: -moz-linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+    background-image: linear-gradient(top left 90deg, #6ec2e8 0%, #b6e2ff 100%);
+}
+
+.logo {
+  padding-left: 23px;
+}

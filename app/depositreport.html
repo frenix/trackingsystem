@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Fees Tracking System</title>
+
+    <!-- Bootstrap -->
+    <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- my css -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div>
+        <a href="#" class="logo-icon">
+          <!-- img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/logo.png" -->
+          <img src="img/fryfish.jpg">
+        </a>
+        <div id="user-container">
+            <ul class="menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">View Deposit Report</a></li>
+              <li><a href="#">Login/Logout</a></li>
+            </ul>
+          </div>
+        <form id="user-form">
+            <!-- Month -->
+            <div>
+                <label id ="monthSelect" class="label">Pick a month</label>
+                <select class="select">
+                   <option class="select option" value="0">-</option>
+                  <option class="select option" value="1">January</option>
+                  <option class="select option" value="2">February</option>
+                  <option class="select option" value="3">March</option>
+                  <option class="select option" value="4">April</option>
+                  <option class="select option" value="5">May</option>
+                  <option class="select option" value="6">June</option>
+                  <option class="select option" value="7">July</option>
+                  <option class="select option" value="8">August</option>
+                  <option class="select option" value="9">September</option>
+                  <option class="select option" value="10">October</option>
+                  <option class="select option" value="11">November</option>
+                  <option class="select option" value="12">December</option>
+                </select>
+            </div>
+            <div>
+              <table class="table" id="depositTable" style="width:100%">
+                <thead>
+                  <tr>
+                    <th>Deposit Date</th>
+                    <th>Employee name</th>
+                    <th>Disbursement Voucher </th>
+                    <th>Description</th>
+                    <th>Amount (PHP)</th>
+                    <th>Bank Account</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+              </table>
+           </div>
+        </form>
+    </div> <!-- end of header-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!-- script src="js/bootstrap.min.js"></script-->
+    <script src="js/depositreport.js"></script>
+  </body>
+</html>
