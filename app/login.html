@@ -21,35 +21,35 @@
   </head>
   <body>
     <div>
-      <a href="#" class="logo-icon">
-        <!-- img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/flipboard/logo.png" -->
-        <img class="logo" src="img/fryfish.jpg">
-      </a>
-        <div class="container">
-            <ul class="menu" >
-              <li><a href="#">Home</a></li>
-              <li><a href="login.html">Login/Logout</a></li>
-              <li><a href="adduser.html">Add Employee</a></li>
-              <li><a href="adddeposit.html">Add Deposit Entry</a></li>
+
+        <div id="user-container">
+           <div id="menuOverlay" style="background:url(img/bannerblue.jpg)">
+            <ul class="menu">
+              <li><a href="../index.html" id="idxhome">Home</a></li>
+              <li><a href="depositreport.html" id="viewdeposit">View Deposit Report</a></li>
+              <li><a href="login.html" id="loginout">Login/Logout</a></li>
             </ul>
+          </div>
         </div>
-        <form class="form-small">
-            <div>
-                <p><label class="label-small">If you have created an account with us, come on board and <span class="text-danger">Log-in!</span></label></p>
-            </div>
-            <!-- Username -->
-            <div>
-                <input class="text" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
-            </div>
-            <!-- Password -->
-            <div>
-                <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required autofocus>   
-            </div>
-            <div id="lower">
-              <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-              <input type="submit" value="Login" onclick="checkCookie()">
-            </div><!--/ lower-->
-        </form>
+        <center>
+          <form class="form-small" action="adduser.html">
+              <div>
+                  <p><label class="label-small">If you have created an account with us, come on board and <span class="text-danger">Log-in!</span></label></p>
+              </div>
+              <!-- Username -->
+              <div>
+                  <input class="text" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
+              </div>
+              <!-- Password -->
+              <div>
+                  <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required autofocus>   
+              </div>
+              <div id="lower">
+                <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
+                <input type="submit" id="btnLogin" value="Login" onsubmit="return checkCookie();"/>
+              </div><!--/ lower-->
+          </form>
+        </center>
     </div> <!-- end of header-->
 
     

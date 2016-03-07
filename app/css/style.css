@@ -2,18 +2,17 @@
 
 .container {
   /*width: 960px;*/
-  width: : 500px;         
+  width: : 960px;        
   position: fixed;
   left: 30px;
   background: #fff;
   border-radius: 3px;
   border: 1px solid #ccc;
   box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-
 }
 
 #user-container {
-  width: 960px;    
+  width: 800px;    
   position: fixed;
   left: 30px;
   background: #fff;
@@ -55,7 +54,9 @@
 }
 
 .menu a {
-  color: #898989;
+  color: white; /*#898989;*/
+  font-weight: bold;
+  padding-left: 50px;
 }
 
 /* Dropdown */
@@ -72,6 +73,16 @@
   font-weight: 300;
 }
 
+/* menu-overlay */
+#menuOverlay {
+  position: fixed; /*or absolute*/
+  /*top:0;
+  left:0;*/
+  width: 900px;
+  height: 50px;
+  background: blue;
+  z-index: 999; /* or greater value */
+}
 
 /* Carousel */
 
@@ -322,7 +333,6 @@ html, body {
 
   margin: 20px;
 }
-
 /* Table */
 table {
   width: 90%;
@@ -370,9 +380,9 @@ tr:hover {background-color: #f5f5f5};
   color: #555;
   background-color: #ffffff;
   position: fixed;
-  width: 548px;
+  width: 900px;
   height: 450px;
-  top: 290px;
+  top: 200px;
   left: 200px;
   margin-top: -140px;
   margin-left: -170px;
@@ -386,9 +396,9 @@ tr:hover {background-color: #f5f5f5};
   color: #555;
   background-color: #ffffff;
   position: fixed;
-  width: 548px;
+  width: 900px;
   height: 250px;
-  top: 300px;
+  top: 200px;
   left: 200px;
   margin-top: -140px;
   margin-left: -170px;
@@ -403,10 +413,10 @@ tr:hover {background-color: #f5f5f5};
   color: #555;
   background-color: #ffffff;
   position: fixed;
-  width: 960px; 
+  width: 900px; 
 
   /*height: 543px;*/
-  top: 300px;
+  top: 200px;
   left: 200px;
   margin-top: -140px;
   margin-left: -170px;

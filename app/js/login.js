@@ -22,6 +22,14 @@ function getCookie(cname) {
     return "";
 }
 
+function eraseCookie() {
+    console.log("eraseCookie()");
+    var cname = getCookie("username");
+    console.log("cookie name: " + cname);
+    setCookie(cname,"",-1);
+    return true;
+}
+
 function checkCookie() {
     console.log("checkCookie()");
 
@@ -30,8 +38,11 @@ function checkCookie() {
     var password="";
     console.log("user: " + user);
 
+
     if (user != "") {
         alert("Welcome again " + user);
+        //window.location="adduser.html";
+        return true;
     } else {
        //user = prompt("Please enter your name:","");
        console.log("Enter username");
@@ -41,9 +52,10 @@ function checkCookie() {
 
        if (user != "" && user != null && user=="qwer") {
             console.log(">> setCookie");
-           setCookie("username", user+password, 30);
+            setCookie("username", user+password, 30);
        }
     }
+
 }
 
 $(document).ready(checkCookie());
