@@ -27,12 +27,12 @@
             <ul class="menu">
               <li><a href="../index.html" id="idxhome">Home</a></li>
               <li><a href="depositreport.html" id="viewdeposit">View Deposit Report</a></li>
-              <li><a href="login.html" id="loginout">Login/Logout</a></li>
+              <li><a href="login.html" id="loginout" onclick="return (checkCookie());">Login/Logout</a></li>
             </ul>
           </div>
         </div>
         <center>
-          <form class="form-small" action="adduser.html">
+          <form class="form-small">
               <div>
                   <p><label class="label-small">If you have created an account with us, come on board and <span class="text-danger">Log-in!</span></label></p>
               </div>
@@ -46,7 +46,7 @@
               </div>
               <div id="lower">
                 <input type="checkbox"><label class="check" for="checkbox">Keep me logged in</label>
-                <input type="submit" id="btnLogin" value="Login" onsubmit="return checkCookie();"/>
+                <input type="submit" id="btnLogin" value="Login" action="adddeposit.html" onsubmit="return (checkCookie());"/>
               </div><!--/ lower-->
           </form>
         </center>
@@ -57,6 +57,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/login.js"></script>
+    <script src="js/app.js"></script>
+    
   </body>
 </html>

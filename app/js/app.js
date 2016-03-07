@@ -32,28 +32,32 @@ function eraseCookie() {
 
 function checkCookie() {
     console.log("checkCookie()");
-
-
-    var user=getCookie("username");
+    alert($('#userName').val());
+    //use username
+    var userName = $('#userName').val();
+    var passWord = $('#passPhrase').val();
+    alert(userName);
+   
+    var user=getCookie(userName);
     var password="";
-    console.log("user: " + user);
+    alert("user: " + user);
 
 
-    if (user != "") {
+    if (user != "" || userName == "admin") {
         alert("Welcome again " + user);
         //window.location="adduser.html";
         return true;
     } else {
        //user = prompt("Please enter your name:","");
-       console.log("Enter username");
-        user = $("#userName").val();
+        alert("username is " + user);
 
-        console.log("username is " + user);
-
-       if (user != "" && user != null && user=="qwer") {
-            console.log(">> setCookie");
-            setCookie("username", user+password, 30);
+       if (user == "" && userName != "") {
+            alert(">> setCookie");
+            //setCookie("username", user+password, 30);
+            setCookie(userName, passWord, 30);
+            alert("setCookie");
        }
+       return false;
     }
 
 }

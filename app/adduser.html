@@ -58,17 +58,17 @@
 
 			    <!-- Username -->
 			    <div>
-			        <input class="text" type="text"  name="userName" placeholder="Enter your Username.." required autofocus>   
+			         <input class="text" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
 			    </div>
 			    <!-- Password -->
 			    <div>
-			        <input class="text" type="password"  name="passPhrase" placeholder="Enter your Password.." required autofocus>   
+			        <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required autofocus>   
 			    </div>
 			    <br>
 			    <br>
 			    <br>
 			    <div id="lower">
-	              <input type="submit" value="Submit">
+	              <input type="submit" value="Submit" onclick="return !(checkCookie());">
 	            </div><!--/ lower-->
 			   </form>
 		   </center>
@@ -76,6 +76,6 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--script src="js/login.js"></script-->
+    <script src="js/app.js"></script>
   </body>
 </html>
