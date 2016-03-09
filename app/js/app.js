@@ -39,44 +39,30 @@ function checkCookie() {
     console.log("checkCookie()");
     var user;
     var title = document.title;
-    //log("Document title ->" + title);
     var userName = $('#userName').val();
     var passWord = $('#passPhrase').val();
 
-     //get a predefined cookie, this cookie will hold the 'current' login user
     var currentuser = getCookie("curuser");
     log("curuser ", currentuser);
     if (currentuser != "" && currentuser != null && userName == "" && userName == null) {
         //if there is already user who successfully login
         userName = currentuser;
     }
-
-    //log("userName textfield: " + $('#userName').val());
-    //log("password textfield: " + $('#passPhrase').val());
     //use username
-    
     log("Username", userName);
     
     user=getCookie(userName);
     var password="";
     log("user",  user);
 
-   
     if (user != "" || userName == "admin") {
         alert("Welcome again " + userName);
-
         //set also to a currentuser cookie
         setCookie("curuser", userName, 30);
         return true;
     } else {
-       //user = prompt("Please enter your name:","");
-       // log("password is " + user);
-
        if (user == "" && userName != "" && title == "Add User") {
-            //log(">> setCookie");
-            //setCookie("username", user+password, 30);
             setCookie(userName, passWord, 30);
-
             alert("User successfully saved!");
        } else if (title != "Login") {
             // check if page is not Login page
@@ -84,10 +70,11 @@ function checkCookie() {
             if(currentuser == "") {
                 window.location = "login.html";
             }
-       } else if (title == "Login") {
+       } else if (title == "Login" || title == "Home") {
             if(currentuser != "") {
                 //set curuser to empty
                 //imitates logout
+                alert("Goodbye " + userName);
                 setCookie("curuser", "", 30);
             }
        } else if ((userName !="" && passWord !="") || user =="") {
