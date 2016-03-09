@@ -481,3 +481,10 @@ input[type=submit]:active {
 .logo {
   padding-left: 23px;
 }
+
+.note {
+    margin-left: 3px;
+    font-size: 11px;
+    color: #444;
+    text-shadow: 0 1px 0 #fff;
+}

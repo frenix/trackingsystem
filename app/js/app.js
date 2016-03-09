@@ -90,7 +90,7 @@ function checkCookie() {
                 //imitates logout
                 setCookie("curuser", "", 30);
             }
-       } else if (userName !="" && passWord !="") {
+       } else if ((userName !="" && passWord !="") || user =="") {
             alert("User not found!");
        }
        return false;
