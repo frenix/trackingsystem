@@ -1,3 +1,5 @@
+/* cookie template from http://www.w3schools.com/js/js_cookies.asp*/
+
 function log(header, details)
 {
     //alert(header + ": " + details);
@@ -37,7 +39,7 @@ function eraseCookie() {
 
 function checkCookie() {
     console.log("checkCookie()");
-    var user;
+    var pw="";
     var title = document.title;
     var userName = $('#userName').val();
     var passWord = $('#passPhrase').val();
@@ -50,18 +52,16 @@ function checkCookie() {
     }
     //use username
     log("Username", userName);
-    
-    user=getCookie(userName);
-    var password="";
-    log("user",  user);
-
-    if (user != "" || userName == "admin") {
+    //retrieve password from cookie
+    pw=getCookie(userName);
+    log("user-password",  pw);
+    if (pw !="" && pw == passWord || userName == "admin") {
         alert("Welcome again " + userName);
         //set also to a currentuser cookie
         setCookie("curuser", userName, 30);
         return true;
     } else {
-       if (user == "" && userName != "" && title == "Add User") {
+       if (pw == "" && userName != "" && title == "Add User") {
             setCookie(userName, passWord, 30);
             alert("User successfully saved!");
        } else if (title != "Login") {
@@ -74,10 +74,10 @@ function checkCookie() {
             if(currentuser != "") {
                 //set curuser to empty
                 //imitates logout
-                alert("Goodbye " + userName);
+                alert("Goodbye..." + userName);
                 setCookie("curuser", "", 30);
             }
-       } else if ((userName !="" && passWord !="") || user =="") {
+       } else if (userName !="" && passWord !="" && pw =="") {
             alert("User not found!");
        }
        return false;
