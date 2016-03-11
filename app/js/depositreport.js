@@ -10,7 +10,7 @@ function populateTable() {
     console.log("populateTable!");
     var index;
     for (index = 0; index < montharr.length; index++) {
-        $('.table').append(montharr[index][1]); 
+        $('#depositTable').append(montharr[index][1]); 
     } 
 };
 
@@ -35,7 +35,7 @@ var main = function() {
             for (index = 0; index < montharr.length; index++) {
                 if(montharr[index][0]==optval) {
                     //display only the 2nd element
-                    $('.table').append(montharr[index][1]); 
+                    $('#depositTable').append(montharr[index][1]); 
                 } 
             }
         }
