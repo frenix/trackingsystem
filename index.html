@@ -8,7 +8,7 @@
     <title>Home</title>
 
     <!-- Bootstrap -->
-    <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
+    <link href="app/css/bootstrap.min.css" rel="stylesheet">
     <link href="app/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -19,33 +19,62 @@
     <![endif]-->
   </head>
   <body>
-    <div>
-        <div id="user-container">
-          <div id="menuOverlay" style="background:url(app/img/bannerblue.jpg)" width="980px">
-            <ul class="menu">
-              <li><a href="index.html" id="idxhome">Home</a></li>
-              <li><a href="app/depositreport.html" id="viewdeposit">View Deposit Report</a></li>
-              <li><a href="app/login.html" id="loginout">Login/Logout</a></li>
-            </ul>
-          </div>
+    <div class="container">
+      <!-- BANNER-->
+      <div id="navigation">
+        <!-- display banner-->
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class= "navbar navbar-inverse navbar-static-top">
+         <div class="container-fluid">
+            <a href="#" class="navbar-brand">Tracking System</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="../index.html" id="idxhome">Home</a></li>
+                <li><a href="app/depositreport.html" id="viewdeposit">View Deposit</a></li>
+                <li><a href="app/login.html" id="loginout" onclick="return (checkCookie());">Login/Logout</a></li>
+              </ul>
+            </div>
         </div>
-        <center>
-          <form id="user-form">
-              <br>
-              <div id="lower">
-                <input class="text" type="text"  id="searchme" placeholder="Search Me.." required autofocus>  
-                <input type="submit" id="btnLogin" value="Go" onsubmit="return checkCookie();"/> <br>
-               <label class="note"><span class="text-danger">Note:</span> This project uses cookies. <br>
-                      Chrome has a problem in storing cookies without server.<br>
-                      Please use IIS, Apache, or browser that allows file-based cookie storing.</label> 
-              </div><!--/ lower-->
-          </form>
-        </center>  
-    </div> <!-- end of header-->
+      </div>
+
+      <form class="form-horizontal" role="form">
+        <br>
+        <div id="lower" class="form-group">
+          <div class="form-group">
+            <label class="sr-only" for="searchme">Search Me:</label>
+            <div class="col-sm-offset-1 col-sm-2">
+               <input class="text" type="text"  id="searchme" placeholder="Search Me.." required autofocus> 
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-3">
+               <input type="submit"  class="btn btn-default" id="btnLogin" value="Go" onsubmit="return checkCookie();"/> 
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="col-sm-10">
+                <label class="note"><span class="text-danger">Note:</span> This project uses cookies. <br>
+                Chrome has a problem in storing cookies without server.<br>
+                Please use IIS, Apache, or browser that allows file-based cookie storing.</label> 
+            </div>
+          </div>
+        </div><!--/ lower-->
+      </form>
+
+    </div> <!-- end of encapsulation-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- script src="js/bootstrap.min.js"></script-->
+    <script src="app/js/bootstrap.min.js"></script>
   </body>
 </html>
