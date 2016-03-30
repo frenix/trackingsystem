@@ -1,6 +1,6 @@
 /* General */
 
-.container {
+.mycontainer {
   /*width: 960px;*/
   width: : 960px;        
   position: fixed;
@@ -35,6 +35,16 @@
   padding: 15px;
 }
 
+/* Navigation */
+/* CSS used here will be applied after bootstrap.css */
+#navigation,.navbar .navbar-default{
+  border-top: 2px dotted blue;
+  border-bottom: 2px dotted blue; 
+  background:url("../img/bannerblue.jpg");
+  font-style: zapfino;
+  height: 55px;
+  padding-bottom: 10px;
+}
 
 /* Menu */ 
 
@@ -197,11 +207,11 @@ th, td {
 }
 
 th {
-    background-color: #4CAF50;
+    background-color: #1372d1; /* #4CAF50; (green) */
     color: white;
     font-size: 15px;
 }
-tr:hover {background-color: #f5f5f5};
+tr:hover {background-color: #FCF0F0; /*#f5f5f5 (gray)*/};
 /*tr:nth-child(even){background-color: #f2f2f2}*/
 
 /* Form */

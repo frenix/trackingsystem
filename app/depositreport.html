@@ -8,7 +8,7 @@
     <title>View Deposit Details</title>
 
     <!-- Bootstrap -->
-    <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- my css -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -20,22 +20,37 @@
     <![endif]-->
   </head>
   <body>
-    <div>
-        <div id="user-container">
-          <div id="menuOverlay" style="background:url(img/bannerblue.jpg)" width="980px">
-            <ul class="menu">
-              <li><a href="../index.html" id="idxhome">Home</a></li>
-              <li><a href="depositreport.html" id="viewdeposit">View Deposit Report</a></li>
-              <li><a href="login.html" id="loginout">Login/Logout</a></li>
-            </ul>
-          </div>
+    <div class="container">
+      <!-- BANNER-->
+      <div id="navigation">
+        <!-- display banner-->
+      </div>
+
+      <!-- NAVIGATION -->
+      <div class= "navbar navbar-inverse navbar-static-top">
+         <div class="container-fluid">
+            <a href="#" class="navbar-brand">Tracking System</a>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="../index.html" id="idxhome">Home</a></li>
+                <li><a href="depositreport.html" id="viewdeposit">View Deposit</a></li>
+                <li><a href="login.html" id="loginout" onclick="return (checkCookie());">Login/Logout</a></li>
+              </ul>
+            </div>
         </div>
-        <form id="user-form">
+      </div>
+
+        <form class="form-horizontal" role="form">
             <!-- Month -->
             <div>
                 <label id ="monthSelect" class="label">Pick a month</label>
                 <select class="select">
-                   <option class="select option" value="0">--</option>
+                 <option class="select option" value="0">--</option>
                   <option class="select option" value="1">January</option>
                   <option class="select option" value="2">February</option>
                   <option class="select option" value="3">March</option>
@@ -50,7 +65,7 @@
                   <option class="select option" value="12">December</option>
                 </select>
             </div>
-            <div>
+            <div class="table-responsive">
               <table id="depositTable">
                 <thead>
                   <tr>
@@ -73,7 +88,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- script src="js/bootstrap.min.js"></script-->
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/depositreport.js"></script>
   </body>
 </html>

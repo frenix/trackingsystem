@@ -3,6 +3,7 @@
 function log(header, details)
 {
     //alert(header + ": " + details);
+    console.log(header + " " + details);
 }
 
 function setCookie(cname,cvalue,exdays) {

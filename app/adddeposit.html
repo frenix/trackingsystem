@@ -8,7 +8,7 @@
     <title>Add Deposit</title>
 
     <!-- Bootstrap -->
-    <!-- link href="css/bootstrap.min.css" rel="stylesheet" -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- my css -->
     <link href="css/style.css" rel="stylesheet">
 
@@ -20,61 +20,79 @@
     <![endif]-->
   </head>
   <body>
-    <div>
-        <div class="container">
-          <div id="menuOverlay" style="background:url(img/bannerblue.jpg)">
-            <ul class="menu">
-              <li><a href="../index.html" id="idxhome">Home</a></li>
-              <li><a href="login.html" id="loginout">Login/Logout</a></li>
-              <li><a href="adduser.html" id="addemp">Add Employee</a></li>
-              <li><a href="adddeposit.html" id="adddeposit">Add Deposit Entry</a></li>
-          </ul>
+    <div class="container">
+      <!-- BANNER-->
+        <div id="navigation">
+          <!-- display banner-->
         </div>
+
+      <!-- NAVIGATION -->
+      <div class= "navbar navbar-inverse navbar-static-top">
+       <div class="container-fluid">
+          <a href="#" class="navbar-brand">Tracking System</a>
+          <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav">
+              <li><a href="../index.html" id="idxhome">Home</a></li>
+                <li><a href="login.html" id="loginout">Login/Logout</a></li>
+                <li><a href="adduser.html" id="addemp">Add Employee</a></li>
+                <li><a href="adddeposit.html" id="adddeposit">Add Deposit Entry</a></li>
+            </ul>
+          </div>
       </div>
-      <center>
-  	    <form class="form-large">
-  	    	<div>
+      </div>
+
+	    <form class="form-horizontal" role="form">
+        <div class="form-group">
+  	    	<div class="col-sm-offset-2">
   	    		<label class="caption">Add Deposit</label>
   	    	</div>
   		    <!-- Employee Name -->
-  		    <div>
+  		    <div class="col-sm-offset-2">
   	        <input class="text" type="text"  name="empName" placeholder="Enter your employee name.." required autofocus autocomplete="on">   
   		    </div>
 
   		    <!-- Disbursement Voucher # -->
-  		    <div>
+  		    <div class="col-sm-offset-2">
   	        <input class="text" type="text"  name="voucherNum" placeholder="Enter your disbursement voucher number.." required autofocus>   
   		    </div>
 
   		    <!-- Description -->
-  		    <div>
+  		    <div class="col-sm-offset-2">
   	        <textarea class = "text" rows="10" name="Description" placeholder="Enter description.." required autofocus>
   	        </textarea>   
   		    </div>
 
   		    <!-- Amount -->
-  		    <div>
+  		    <div class="col-sm-offset-2">
   	        <input class="text" type="number"  name="Amount" placeholder="Enter amount (in Pesos).." required autofocus>   
   		    </div>
   		    <!-- Deposit Date -->
-  		    <div>
+  		    <div class="col-sm-offset-2">
   	        <input class="text" type="date"  name="depositDate" placeholder="Enter deposit date.." required autofocus>   
   		    </div>
   		    <!-- Bank Acct -->
-  		    <div>
+  		    <div class="col-sm-offset-2">
   	        <input class="text" type="number"  name="Amount" placeholder="Enter your bank account number.." required autofocus>   
   		    </div>
-  		    <div id="lower">
+        </div> <!--<div class="form-group"> -->
+
+		    <div id="lower">
+          <div class="col-sm-offset-2 col-sm-4">
             <input type="submit" value="Submit">
-          </div><!--/ lower-->
-  		   </form>
-       </center>
+          </div>
+        </div><!--/ lower-->
+		   </form>
 	</div> <!-- end of header-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!-- script src="js/bootstrap.min.js"></script-->
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
