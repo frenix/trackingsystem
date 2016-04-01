@@ -149,6 +149,15 @@ html, body {
   margin: 0px;
 }
 
+.text-note {
+  color: red;
+  
+  font-family: 'Oswald', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+
+  margin: 0px;
+}
 /* Button */
 .button {
   color: black;
