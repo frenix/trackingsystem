@@ -40,10 +40,39 @@ function eraseCookie() {
 
 function checkCookie() {
     console.log("checkCookie()");
+    var userName = "";
+    var passWord="";
     var pw="";
     var title = document.title;
-    var userName = $('#userName').val();
-    var passWord = $('#passPhrase').val();
+    var loc = location.host;
+    var isChrome = window.chrome;
+
+    //get data from login.html
+    if (title == "Login") {
+        userName = $('#userName').val();
+        passWord = $('#passPhrase').val();
+    }
+    
+
+    /* Since chrome does not allow file-based cookies
+    This code will determine if file is opened as file-based and not
+    hosted in a webserver*/
+    if((loc == null || loc =="") && isChrome) {
+        console.log("Is file-based and on chrome!");
+        if(title == "Login") {
+            if(userName != "" && passWord != "") {
+                if(userName != "admin" || passWord !="admin") { 
+                    alert("Please use default credentials...");
+                    window.location = "login.html";
+                    return false;
+                }
+            }
+        }
+        if(title != "Login") {
+            log("Welcome user", "admin");
+        }
+        return true;
+    } 
 
     var currentuser = getCookie("curuser");
     log("curuser ", currentuser);
@@ -56,8 +85,8 @@ function checkCookie() {
     //retrieve password from cookie
     pw=getCookie(userName);
     log("user-password",  pw);
-    if (pw !="" && pw == passWord || userName == "admin") {
-        alert("Welcome again " + userName);
+    if (pw !="" && pw == passWord || (userName == "admin" && passWord == "admin")) {
+        alert("Welcome " + userName);
         //set also to a currentuser cookie
         setCookie("curuser", userName, 30);
         return true;
@@ -69,6 +98,7 @@ function checkCookie() {
             // check if page is not Login page
             // getcookie and route to login page if cookie not found
             if(currentuser == "") {
+                alert("Needs authorization!");
                 window.location = "login.html";
             }
        } else if (title == "Login" || title == "Home") {
