@@ -46,14 +46,14 @@
 		</div>
 		</div>
 
-	    <form class="form-horizontal" role="form">
+	    <form method="POST" class="form-horizontal" role="form" name="userForm" onsubmit="return checkUserForm(this);">
   	  		<div class="form-group">
-		    	<div class="col-sm-offset-2">
+		    	<div class="col-sm-offset-2">checkUserForm
 		    		<label class="caption">Add User</label>
 		    	</div>
 			    <!-- Employee Number -->
 			    <div class="col-sm-offset-2">
-			        <input class="text" type="text"  name="empNo" placeholder="Enter your employee number.." required autofocus>   
+			        <input class="text" type="number"  name="empNo" placeholder="Enter your employee number.."  required autofocus>   
 			    </div>
 
 			    <!-- First Name -->
@@ -68,7 +68,7 @@
 
 			    <!-- Last Name-->
 			    <div class="col-sm-offset-2">
-			        <input class="text" type="text"  name="lName" placeholder="Enter your Last Name.." required autofocus>   
+			        <input class="text" type="text"  name="lName" placeholder="Enter your Last Name.." autofocus>   
 			    </div>
 
 			    <!-- Username -->
@@ -77,7 +77,7 @@
 			    </div>
 			    <!-- Password -->
 			   <div class="col-sm-offset-2">
-			        <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required autofocus>   
+			        <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required  autofocus>   
 			    </div>
 			</div> <!--<div class="form-group"> -->
 			
@@ -86,7 +86,7 @@
 		    <br>
 		    <div id="lower">
 	    		<div class="col-sm-offset-2 col-sm-4">
-              		<input type="submit" value="Submit" onclick="return !(checkCookie());">
+              		<input type="submit" value="Submit">
               	</div>
             </div><!--/ lower-->
 		   </form>
@@ -97,5 +97,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/validate.js"></script>
   </body>
 </html>
