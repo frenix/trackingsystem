@@ -147,7 +147,7 @@ function validateDepositEmptyInput(form)
   {
     console.log("checkDepositForm");
      //check empty fields
-    if (validateUserEmptyInput(form) == false) {
+    if (validateDepositEmptyInput(form) == false) {
         return false;
     }
      // validation fails if the input doesn't match our regular expression
