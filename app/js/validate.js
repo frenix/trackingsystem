@@ -1,5 +1,4 @@
-
- // regular expression to match only characters and spaces
+// regular expression to match only characters and spaces
 var reg = /^[a-zA-Z ]+$/;
 
 /* 
