@@ -38,9 +38,9 @@
 		    <div class="collapse navbar-collapse navHeaderCollapse">
 		      <ul class="nav navbar-nav">
 		        <li><a href="../index.html" id="idxhome">Home</a></li>
-		          <li><a href="login.html" id="loginout">Login/Logout</a></li>
-		          <li><a href="adduser.html" id="addemp">Add Employee</a></li>
-		          <li><a href="adddeposit.html" id="adddeposit">Add Deposit Entry</a></li>
+	          	<li><a href="adduser.html" id="addemp">Add Employee</a></li>
+	          	<li><a href="adddeposit.html" id="adddeposit">Add Deposit Entry</a></li>
+				<li><a href="login.html" id="loginout">Login/Logout</a></li>
 		      </ul>
 		    </div>
 		</div>
@@ -48,37 +48,40 @@
 
 	    <form method="POST" class="form-horizontal" role="form" name="userForm" onsubmit="return checkUserForm(this);">
   	  		<div class="form-group">
-		    	<div class="col-sm-offset-2">checkUserForm
+		    	<div class="col-sm-offset-2">
 		    		<label class="caption">Add User</label>
 		    	</div>
 			    <!-- Employee Number -->
 			    <div class="col-sm-offset-2">
-			        <input class="text" type="number"  name="empNo" placeholder="Enter your employee number.."  required autofocus>   
+			        <input class="text input-sm" type="number"  name="empNo" placeholder="Enter your employee number.."  required autofocus>   
 			    </div>
 
 			    <!-- First Name -->
 			   <div class="col-sm-offset-2">
-			        <input class="text" type="text"  name="fName" placeholder="Enter your First Name.." required autofocus>   
+			        <input class="text input-sm" type="text"  name="fName" placeholder="Enter your First Name.." required autofocus>   
 			    </div>
 
 			    <!-- Middle Initial -->
 			    <div class="col-sm-offset-2">
-			        <input class = "text" type="text"  name="mInitial" placeholder="Enter your Middle Initial." required autofocus>   
+			        <input class = "text input-sm" type="text"  name="mInitial" placeholder="Enter your Middle Initial." required autofocus>   
 			    </div>
 
 			    <!-- Last Name-->
 			    <div class="col-sm-offset-2">
-			        <input class="text" type="text"  name="lName" placeholder="Enter your Last Name.." autofocus>   
+			        <input class="text input-sm" type="text"  name="lName" placeholder="Enter your Last Name.." autofocus>   
 			    </div>
 
 			    <!-- Username -->
 			    <div class="col-sm-offset-2">
-			         <input class="text" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
+			         <input class="text input-sm" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
 			    </div>
 			    <!-- Password -->
 			   <div class="col-sm-offset-2">
-			        <input class="text" type="password"  id="passPhrase" placeholder="Enter your Password.." required  autofocus>   
+			        <input class="text input-sm" type="password"  id="passPhrase" placeholder="Enter your Password (atleast 6 characters).." required  autofocus> 
 			    </div>
+			    <div class="col-sm-offset-2">
+                 	<label><span class="text-note">* All fields are required </span></label> 
+            	</div>
 			</div> <!--<div class="form-group"> -->
 			
 		    <br>
