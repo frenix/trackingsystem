@@ -1,5 +1,9 @@
 // regular expression to match only characters and spaces
 var reg = /^[a-zA-Z ]+$/;
+// regular expression to match only alphanumeric characters and spaces
+var regalphanum = /^[\w ]+$/;
+// regular expression to match only numbers
+var regnum =  /^-?(\d+\.?\d*)$|(\d*\.?\d+)$/;
 
 /* 
  * Check if input fields are empty for AddUser page 
@@ -113,7 +117,7 @@ function validateDepositEmptyInput(form)
     return false;
   } 
 
-  if(form.Description.value =="") {
+  if(form.Description.value.trim() =="") {
     alert("Error: Input cannot be empty!");
     form.Description.focus();
     return false;
@@ -161,22 +165,21 @@ function validateDepositEmptyInput(form)
       form.voucherNum.focus();
       return false;
     }
-    if(!reg.test(form.Description.value)) {
-      alert("Error: Please input characters only!");
-      form.Description.focus();
-      return false;
-    }
-    if(!reg.test(form.Amount.value)) {
+
+    if(!regnum.test(form.Amount.value)) {
       alert("Error: Please input characters only!");
       form.Amount.focus();
       return false;
     }
-    if(!reg.test(form.depositDate.value)) {
-      alert("Error: Please input characters only!");
-      form.depositDate.focus();
+
+    if(!regalphanum.test(form.Description.value.trim())) {
+      alert("Error: Please input alphanumeric characters only!");
+      form.Description.focus();
       return false;
     }
-    if(!reg.test(form.BankAcct.value)) {
+
+
+    if(!regnum.test(form.BankAcct.value)) {
       alert("Error: Please input characters only!");
       form.BankAcct.focus();
       return false;
