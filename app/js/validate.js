@@ -78,7 +78,7 @@ function checkUserForm(form)
 
     if(!reg.test(form.userName.value)) {
       alert("Error: Please input characters only!");
-      form.lName.focus();
+      form.userName.focus();
       return false;
     }
 
