@@ -5,100 +5,6 @@ var regalphanum = /^[\w ]+$/;
 // regular expression to match only numbers
 var regnum =  /^-?(\d+\.?\d*)$|(\d*\.?\d+)$/;
 
-/* 
- * Check if input fields are empty for AddUser page 
- */
-function validateUserEmptyInput(form) 
-{
-  console.log("validateEmptyInput");
-
-	if(form.fName.value =="") {
-        alert("Error: Input cannot be empty!");
-        form.fName.focus();
-        return false;
-    }
-
-    if(form.mInitial.value =="") {
-        alert("Error: Input cannot be empty!");
-        form.mInitial.focus();
-        return false;
-    }
-
-    if(form.lName.value =="") {
-        alert("Error: Input cannot be empty!");
-        form.lName.focus();
-        return false;
-    }
-
-    if(form.userName.value =="") {
-        alert("Error: Input cannot be empty!");
-        form.userName.focus();
-        return false;
-    }
-
-    if(form.passPhrase.value =="") {
-        alert("Error: Input cannot be empty!");
-        form.passPhrase.focus();
-        return false;
-    }
-
-    // no empty strings
-    return true;
-}
-
-/*
- * Validates input fields for AddUser page
- */
-function checkUserForm(form)
-  {
-    console.log("checkuserForm");
-    //check empty fields
-    if (validateUserEmptyInput(form) == false) {
-        return false;
-    }
-   
-
-    // validation fails if the input doesn't match our regular expression
-    if(!reg.test(form.fName.value)) {
-      alert("Error: Please input characters only!");
-      form.fName.focus();
-      return false;
-    }
-
-    if(!reg.test(form.mInitial.value)) {
-      alert("Error: Please input characters only!");
-      form.mInitial.focus();
-      return false;
-    }
-    if(!reg.test(form.lName.value)) {
-      alert("Error: Please input characters only!");
-      form.lName.focus();
-      return false;
-    }
-
-    if(!reg.test(form.userName.value)) {
-      alert("Error: Please input characters only!");
-      form.userName.focus();
-      return false;
-    }
-
-    if(form.passPhrase.value.length < 6) {
-      alert("Error: Please input more than 6 characters!");
-      form.passPhrase.focus();
-      return false;   
-    }
-    // regular expression to match only alphanumeric characters for password
-    var passreg = /^[\w]+$/;
-    if(!passreg.test(form.passPhrase.value)) {
-      alert("Error: Please input alphanumeric characters without spaces!");
-      form.passPhrase.focus();
-      return false;
-    }
-
-    // validation was successful
-    return true;
-  }
-
 /*****************************************************************/
 /* 
  * Check if input fields are empty for AddDeposit page 
@@ -188,3 +94,51 @@ function validateDepositEmptyInput(form)
     // validation was successful
     return true;
   }
+
+function Insert(form) 
+{
+    console.log("Insert!");
+
+    //get data from adduser.html 
+    if (checkDepositForm(form) == false) {
+      console.log("Insert->FALSE!");
+      return false;
+    }
+
+
+    var empName = form.empName.value;
+    var voucherNum = form.voucherNum.value;
+    var Description = form.Description.value;
+    var Amount = form.Amount.value;
+    var depositDate = form.depositDate.value;
+    var BankAcct = form.BankAcct.value;
+
+    console.log(empName);
+    console.log(voucherNum);
+    console.log(Description);
+    console.log(Amount);
+    console.log(depositDate);
+    console.log(BankAcct);
+
+    $.ajax({ /* THEN THE AJAX CALL */
+            type: "POST", /* TYPE OF METHOD TO USE TO PASS THE DATA */
+            url: "bll/deposit.php", /* PAGE WHERE WE WILL PASS THE DATA */
+            data: {
+              empName: empName,
+              voucherNum: voucherNum,
+              Description: Description,
+              Amount: Amount,
+              depositDate: depositDate,
+              BankAcct: BankAcct
+            }, /* THE DATA WE WILL BE PASSING */
+            success: function(result){ /* GET THE TO BE RETURNED DATA */
+               alert(result);
+            },
+             error: function(jqXHR, exception){
+               alert("An error occured while processing this request!");
+            }
+    });
+    
+    return true;
+};
+

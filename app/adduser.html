@@ -46,7 +46,7 @@
 		</div>
 		</div>
 
-	    <form method="POST" class="form-horizontal" role="form" name="userForm" onsubmit="return checkUserForm(this);">
+	    <form class="form-horizontal" role="form" name="userForm" onsubmit="return Insert(this);">
   	  		<div class="form-group">
 		    	<div class="col-sm-offset-2">
 		    		<label class="caption">Add User</label>
@@ -73,11 +73,11 @@
 
 			    <!-- Username -->
 			    <div class="col-sm-offset-2">
-			         <input class="text input-sm" type="text"  id="userName" placeholder="Enter your Username.." required autofocus>   
+			         <input class="text input-sm" type="text"  name="userName" placeholder="Enter your Username.." required autofocus>   
 			    </div>
 			    <!-- Password -->
 			   <div class="col-sm-offset-2">
-			        <input class="text input-sm" type="password"  id="passPhrase" placeholder="Enter your Password (atleast 6 characters).." required  autofocus> 
+			        <input class="text input-sm" type="password"  name="passPhrase" placeholder="Enter your Password (atleast 6 characters).." required  autofocus> 
 			    </div>
 			    <div class="col-sm-offset-2">
                  	<label><span class="text-note">* All fields are required </span></label> 
@@ -100,6 +100,6 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/validate.js"></script>
+    <script src="js/user.js"></script>
   </body>
 </html>
